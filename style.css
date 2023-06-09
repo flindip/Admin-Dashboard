@@ -1,0 +1,109 @@
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+/*    border: 0; */
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+body {
+line-height: 1;
+}
+ol, ul {
+list-style: none;
+}
+blockquote, q {
+quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+content: '';
+content: none;
+}
+table {
+border-collapse: collapse;
+border-spacing: 0;
+}
+/*CSS reset */
+*{
+border: dotted red 4px;
+}
+html, body{
+height:100%;}
+
+.container{
+height:100%; 
+box-sizing:border-box;
+display:grid;
+grid-template-columns: 1fr 3fr;
+grid-template-rows:auto;
+grid-template-areas: 
+'sidebar header '
+'sidebar projects'
+'sidebar projects'
+'sidebar projects';
+}
+.side-bar{
+grid-area:sidebar;
+background:blue;
+color:white;
+text-align:center;
+display:grid;
+grid-template-rows: 1fr 3fr 2fr;
+}
+
+a{
+color:inherit;
+text-decoration:inherit;
+}
+.side-bar h1{
+  display:flex;
+align-items:center;
+font-size:clamp(1.5rem, 4vw, 2rem);
+gap:5px; 
+}
+.side-bar h1 svg{
+    fill:white;
+    width:clamp(2rem, 4vw, 3rem);
+}
+.side-bar ul{
+list-style-type:none;
+  display:grid;
+  height:fit-content;
+  font-size:clamp(1rem, 4vw, 1.5rem);
+  gap:10px;
+  text-align:left;
+  }
+  .side-bar ul svg{
+    fill:white;
+    width:clamp(1.5rem, 4vw, 2rem);
+    }
+  .side-bar li{
+    display:flex;
+    align-items:center;
+    gap:5px;
+    }
+.side-bar ul li:nth-of-type(7n){
+margin-top:20%;}
+   
+.header{
+grid-area: header; 
+background:yellow;}
+
+.projects{
+grid-area: projects;
+background:grey;}
